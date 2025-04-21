@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Score Checker</title>
+    <!-- Link to Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>ATS Checker</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="ats-section">
+            <h1>ATS Resume Score Checker</h1>
+            <p>Upload your resume and compare it with the job description to get your ATS score!</p>
+
+            <form id="atsForm" class="ats-form">
+                <label for="resumeFile">Upload Resume (PDF/Word):</label>
+                <input type="file" id="resumeFile" accept=".pdf, .docx" required />
+
+                <label for="jobDescription">Paste the Job Description:</label>
+                <textarea id="jobDescription" rows="10" placeholder="Paste the job description here..." required></textarea>
+
+                <button type="submit" class="submit-btn">Check ATS Score</button>
+            </form>
+
+            <div id="atsScoreResult" class="score-result"></div>
+            <div id="feedback" class="feedback"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ATS Resume Score Checker | Made with ♥</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
